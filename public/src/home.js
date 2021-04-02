@@ -69,7 +69,7 @@ function getMostPopularAuthors(books, authors) {
     //Establish the list of author counts and loop through the books
     const authorCounts = books.reduce((authorCounts, book) => {
         //Get the author
-        { name } = getAuthorById(authors, book.authorId);
+        const { name } = getAuthorById(authors, book.authorId);
         const authorName = name.first + " " + name.last;
 
         //Try to find the author in the list
